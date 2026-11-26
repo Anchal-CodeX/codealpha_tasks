@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./image.css">
+</head>
+<body>
+
+    <header>
+        <h1>Visual <span>Gallery</span></h1>
+        <p>Explore the world through images.</p>
+    </header>
+
+    <div class="filters">
+        <button class="active" data-category="all">All</button>
+        <button data-category="nature">Nature</button>
+        <button data-category="anime">Anime</button>
+        <button data-category="space">Space</button>
+    </div>
+
+    <div class="gallery"></div>
+
+    <div class="lightbox">
+        <button class="close">&times;</button>
+        <button class="prev">&#10094;</button>
+        <img src="" alt="Preview">
+        <button class="next">&#10095;</button>
+        <p class="image-count"></p>
+    </div>
+
+    <script src="./image.js"></script>
+</body>
+</html>

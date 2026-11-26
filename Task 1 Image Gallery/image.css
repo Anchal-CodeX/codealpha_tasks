@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+header h1 {
+    font-size: 38px;
+}
+
+header span {
+    color: #00e5ff;
+}
+
+header p {
+    color: #91a4b8;
+    margin-top: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #00e5ff;
+    background: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+button:hover,
+button.active {
+    background: #00c8e0;
+    color: #07111f;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 18px #00e5ff80;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000e;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 70%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.lightbox button {
+    font-size: 22px;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.image-count {
+    position: absolute;
+    bottom: 25px;
+    color: #00e5ff;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .lightbox {
+        gap: 8px;
+    }
+
+    .lightbox img {
+        max-width: 65%;
+    }
+
+    .lightbox button {
+        padding: 8px 12px;
+    }
+}
